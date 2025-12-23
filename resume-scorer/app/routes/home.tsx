@@ -1,13 +1,34 @@
+import Navbar from "~/components/Navbar";
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import { resume } from "../../constants";
+import ResumeCard from "~/components/ResumeCard";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "RESUME_SCORER" },
+    { name: "description", content: "Smart feedback for your resume" },
   ];
 }
 
 export default function Home() {
-  return <Welcome />;
+  return <main>
+    <section className="main-section bg-[url('resume-scorer/public/imgs/bg-main.svg')] bg-cover">
+      <Navbar/>
+      <div className="page-head">
+        <h1>Track Your APPLICATIONS & Resume Rating</h1>
+        <h2>review your submission and check AI-powered feedback.
+        </h2>
+      </div>
+    </section>
+
+    {resume.length > 0 && (
+      <div className="resume-section">
+        {resume.map((item) => (
+          <ResumeCard key={item.id} resume={item} />
+        ))}
+      </div>
+    )}
+
+
+  </main>
 }
