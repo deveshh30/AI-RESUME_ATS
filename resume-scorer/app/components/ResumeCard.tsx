@@ -5,9 +5,9 @@ import Score from './Score'
 const ResumeCard = ({ resume }: { resume: Resume }) => {
   return (
     <div className="resume-card bg-gray-200">
-      <Link to={`/resume/${resume.id}`} className='resume-card-1 animate-in fade-in duration-1500 flex flex-row items-center justify-between gap-4 w-full'>
+      <Link to={`/resume/${resume.id}`} className='resume-card-1 animate-in fade-in duration-1500 flex flex-row items-center justify-between  w-full'>
         
-        <div className="flex-1 flex flex-col gap-1">
+        <div className="flex-1 flex flex-col gap-3">
             <h2 className='!text-black font-bold break-words '>
                 {resume.companyName}
             </h2>
@@ -20,9 +20,9 @@ const ResumeCard = ({ resume }: { resume: Resume }) => {
         </div>
       </Link>
 
-      <div className='mt-2 animate-in duration-1500 fade-in'>
-        <div className="w-full h-[35vh] rounded-md ">
-          <img src={resume.imagePath} alt={`${resume.companyName} logo`} className="w-full h-full object-cover" />
+      <div className='rounded-2xl animate-in duration-1500 fade-in'>
+        <div className="w-full h-[40vh] rounded-md ">
+          <img src={resume.imagePath} alt={`${resume.companyName} logo`} className="w-full h-full object-cover rounded-xl" />
         </div>
       </div>
     </div>
