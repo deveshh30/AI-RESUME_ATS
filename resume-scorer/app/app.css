@@ -23,6 +23,11 @@ body {
   @apply bg-white;
 }
 
+/* Reduce base font-size to scale down the whole page */
+html {
+  font-size: 14px;
+}
+
 main {
   @apply min-h-screen pt-10;
 }
