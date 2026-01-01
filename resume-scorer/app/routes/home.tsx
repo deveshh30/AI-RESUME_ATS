@@ -27,8 +27,10 @@ export default function Home() {
 )
 
   return <main>
+    <Navbar/>
     <section className="main-section bg-[url('resume-scorer/public/imgs/bg-main.svg')] bg-cover">
-      <Navbar/>
+      
+
       
       <div className="page-head py-13 flex flex-col text-center">
         <h1 className="uppercase">Track Your APPLICATIONS & Resume Rating</h1>
